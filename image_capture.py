@@ -1,9 +1,10 @@
 import os
+
 import cv2
 import numpy as np
 
 # data = 'positive'  # positive or negative
-data = 'negative'
+data = 'positive'
 
 match data:
     case 'positive':
@@ -54,6 +55,14 @@ def capture_face_images():
 
         if len(images) % 50 == 0:
             print(len(images))
+
+    # Get a list of all files in the folder
+    file_list = os.listdir(folder_path)
+
+    # Iterate over the list and delete each file
+    for file_name in file_list:
+        file_path = os.path.join(folder_path, file_name)
+        os.remove(file_path)
 
     for i, image in enumerate(images):
         img_resized = cv2.resize(image, (224, 224))

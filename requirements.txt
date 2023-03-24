@@ -1,3 +1,13 @@
-opencv-python
+opencv-python~=4.7.0.72
 mediapipe
 protobuf==3.20.*
+torch~=1.13.1+cu117
+Pillow~=9.3.0
+torchvision~=0.14.1+cu117
+numpy~=1.24.0
+joblib~=1.2.0
+tensorflow~=2.11.0
+sklearn~=0.0.post1
+scikit-learn~=1.2.0
+tqdm~=4.64.1
+matplotlib~=3.6.2
